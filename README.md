@@ -1,4 +1,4 @@
-# tuskweb_php
+# TuskWeb_PHP
 A MVT structured backend module for php. Get your webpages online with this easy framework.
 
 ## Introduction
