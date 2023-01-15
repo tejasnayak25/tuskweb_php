@@ -10,6 +10,12 @@ All the cool features are now also available in PHP!
 
 So with no further ado, let's get started.
 
+## Requirements
+1) Basic knowledge of PHP.
+2) A system which can run PHP.
+3) A code editor like VSCode.
+4) A PHP server. Eg: Xampp.
+
 ## Installation
 There is nothing to install here.
 Just clone this repository and if you don't know how to do this, <a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository">click this</a>.
@@ -52,3 +58,41 @@ This was all for the introduction.
 
 Now let's build a simple website.
 
+## Step 1: Creating a Route
+Open the "urls.php" file in the workspace folder.
+
+Initially it will have something like this
+```php
+$urlpatterns = array(
+    path("/", "home", "Home"),
+    path("/404", "404", "404")
+);
+```
+
+Here the first parameter passed to the path function is the pattern of the url which you want to add, the second parameter is the name of the view(function) which you want to execute when the page is visited and the last parameter is the name of the pattern. The name is going to be used to get the pattern in other files. This will allow you to dynamically change the pattern, i.e., if you change "/" to "/home" without changing the name of the pattern, you won't have to change the urls in other files. We will learn more about this as we proceed.
+
+For creating a new pattern, add this to the array
+```php
+path(pattern, view, name)
+```
+For example,
+```php
+path("/page", "page", "page")
+```
+This will create a new route in your website. But this alone won't work because you haven't setup your "page" view yet.
+
+## Step 2: Creating a View
+Open your "views.php" file in the workspace folder.
+
+It will have something like this
+```php
+$views =
+    array(
+        "home" => function () {
+            render("/home.php", array("title" => "TuskWeb"));
+        },
+        "404" => function () {
+            render("/404.php", array("view" => "one", "title" => "404"));
+        }
+    );
+```
