@@ -79,6 +79,16 @@ For example,
 ```php
 path("/page", "page", "page")
 ```
+
+For paths with dynamic variables, i.e., a dynamic path, we use this
+```php
+path("/something/[str:varname]/page", view, name)
+```
+
+Or
+```php
+path("/something/[str:varname]/page", view, name)
+```
 This will create a new route in your website. But this alone won't work because you haven't setup your "page" view yet.
 
 ## Step 2: Creating a View
@@ -95,4 +105,21 @@ $views =
             render("/404.php", array("view" => "one", "title" => "404"));
         }
     );
+```
+
+Here, views is the array which will be holding all of your views.
+Every element of this array is a function will be executed when the user visits the page with the url which is associated with the view.
+
+To create a view, you need to add an element to the array, whose syntax looks like
+```php
+"view_name" => function (list of args) {
+    // Here goes the executable statements which may include a render function, a redirect or statements to handle a form output.
+}
+```
+
+For example
+```php
+"page" => function () {
+    render("/page.php", array("title"=>"Page"));
+}
 ```
