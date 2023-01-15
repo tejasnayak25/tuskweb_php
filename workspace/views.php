@@ -4,11 +4,6 @@ require_once './tuskweb_modules/shortcuts.php';
 require_once './workspace/forms.php';
 require_once './workspace/models.php';
 require_once './workspace/settings.php';
-function one2() 
-{
-    echo "Hello world!";
-    echo 'one';
-}
 
 $views =
     array(
