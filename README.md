@@ -171,4 +171,5 @@ Before we end this tutorial, a few things you need to keep in mind.
 
 Hope you had a nice day!
 
-Thanks for using TuskWeb - PHP.
+
+### Thanks for using TuskWeb - PHP.
