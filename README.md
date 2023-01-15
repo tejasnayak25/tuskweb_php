@@ -105,7 +105,7 @@ $views =
 ```
 
 Here, views is the array which will be holding all of your views.
-Every element of this array is a function will be executed when the user visits the page with the url which is associated with the view.
+Every element of this array is a function which will be executed when the user visits the page with the url which is associated with the view.
 
 To create a view, you need to add an element to the array, whose syntax looks like
 ```php
