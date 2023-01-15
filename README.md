@@ -84,10 +84,9 @@ For paths with dynamic variables, i.e., a dynamic path, we use this
 ```php
 path("/something/[str:varname]/page", view, name)
 ```
-
 Or
 ```php
-path("/something/[str:varname]/page", view, name)
+path("/something/[num:varname]/page", view, name)
 ```
 This will create a new route in your website. But this alone won't work because you haven't setup your "page" view yet.
 
@@ -123,3 +122,13 @@ For example
     render("/page.php", array("title"=>"Page"));
 }
 ```
+
+For urls with dynamic variables, we use this
+```php
+"page" => function ($varname) {
+    render("/page.php", array("data"=>$varname , "title"=>"Page"));
+}
+```
+As for where this variable comes from, it directly comes from the url.
+For example, w.r.t the above mentioned routes example, if the user visits "/something/example-page/page", then the value of the variable $varname will be "example-page"
+
