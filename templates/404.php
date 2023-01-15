@@ -7,11 +7,10 @@
     echo $title; ?></title>
 
     <link rel="stylesheet" href="<?php loadStatic("./main.css"); ?>">
-    <script src="<?php loadStatic("/main.js"); ?>"></script>
     
 </head>
-<body>
-<p>This is an 404 error!</p>
-<img src="<?php loadMedia("/Kenny.png") ?>" alt="">
+<body style="background: url('<?php echo loadMedia('/404.jpg'); ?>');background-size:cover;background-position:center;">
+<p class="text404">404</p>
+<a class="credits text-black-50" href="https://www.pexels.com/photo/word-error-on-white-surface-4439425/">Photo by Vie Studio</a>
 </body>
 </html>

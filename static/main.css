@@ -1,6 +1,4 @@
 body{
-    /* background-color: #000; */
-    color: white;
     background-size:cover;
     background-position:center;
 }
@@ -16,4 +14,26 @@ button {
     position:absolute;
     bottom:10px;
     right:20px;
+}
+
+.text404 {
+    font-size: 140px;
+    text-align: center;
+    margin-top: 14%;
+    margin-left: -17%;
+    transform: rotate(-35deg) rotateY(-50deg) rotateX(-10deg);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #032143;
+}
+
+@media screen and (width<500px) {
+    .text404 {
+        font-size: 70px;
+        text-align: center;
+        margin-top: 64%;
+        margin-left: -37%;
+        transform: rotate(-35deg) rotateY(-50deg) rotateX(-10deg);
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: #032143;
+    } 
 }

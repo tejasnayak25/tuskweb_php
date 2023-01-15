@@ -16,7 +16,7 @@ $views =
             render("/home.php", array("title" => "TuskWeb"));
         },
         "404" => function () {
-            render("/404.php", array("path" => "/", "view" => "one", "title" => "404"));
+            render("/404.php", array("view" => "one", "title" => "404"));
         }
     );
 
