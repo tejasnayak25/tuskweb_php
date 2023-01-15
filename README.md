@@ -109,7 +109,7 @@ Every element of this array is a function which will be executed when the user v
 
 To create a view, you need to add an element to the array, whose syntax looks like
 ```php
-"view_name" => function (list of args) {
+"view_name" => function () {
     // Here goes the executable statements which may include a render function, a redirect or statements to handle a form output.
 }
 ```
